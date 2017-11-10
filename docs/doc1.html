@@ -1,0 +1,111 @@
+<html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/><title>Docusaurus · Test Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Docusaurus · Test Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://caabernathy.github.ioindex.html"/><meta property="og:description" content="## Getting Started"/><link rel="shortcut icon" href="img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://caabernathy.github.io/blog/atom.xml" title="Test Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://caabernathy.github.io/blog/feed.xml" title="Test Site Blog RSS Feed"/><link rel="stylesheet" href="css/main.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href=""><img class="logo" src="img/docusaurus.svg"/><h2 class="headerTitle">Test Site</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="docs/doc1.html" target="_self">Docs</a></li><li><a href="docs/doc4.html" target="_self">API</a></li><li><a href="en/help.html" target="_self">Help</a></li><li><a href="blog" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Docusaurus</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Docusaurus</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="docs/doc1.html">Docusaurus Guide</a></li></ul></div><div class="navGroup navGroupActive"><h3>First Category</h3><ul><li class="navListItem"><a class="navItem" href="docs/doc2.html">document number 2</a></li></ul></div><div class="navGroup navGroupActive"><h3>Second Category</h3><ul><li class="navListItem"><a class="navItem" href="docs/doc3.html">This is document number 3</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Docusaurus</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" name="getting-started"></a><a href="#getting-started" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Started</h2>
+<p>In your project repo, make sure you have a <code>docs</code> folder containing all of your documentation files written in markdown. Create a <code>website</code> folder inside which you will install and run docusaurus. If you wish, you can also include a <code>blog</code> folder in your project repo at the same level as the <code>docs</code> folder for blog posts.</p>
+<p>Install Docusaurus using <code>npm</code>:</p>
+<pre><code class="hljs"><span class="hljs-keyword">cd</span> website
+npm install <span class="hljs-params">--save-dev</span> docusaurus
+</code></pre>
+<p>In your <code>package.json</code> file, add the following scripts for docusaurus:</p>
+<pre><code class="hljs css json">"scripts": {
+  "start": "docusaurus-start",
+  "build": "docusaurus-build",
+  "publish-gh-pages": "docusaurus-publish",
+  "examples": "docusaurus-examples"
+}
+</code></pre>
+<p>To create example files for configuration, run <code>examples</code> using npm:</p>
+<pre><code class="hljs">npm <span class="hljs-keyword">run</span><span class="bash"> examples
+</span></code></pre>
+<p>This will create the following files in your website folder:</p>
+<pre><code class="hljs">core/Footer<span class="hljs-selector-class">.js</span>
+example-docs/en/doc1<span class="hljs-selector-class">.md</span>
+example-docs/en/doc2<span class="hljs-selector-class">.md</span>
+example-docs/en/doc3<span class="hljs-selector-class">.md</span>
+example-docs/en/exampledoc4<span class="hljs-selector-class">.md</span>
+example-docs/en/exampledoc5<span class="hljs-selector-class">.md</span>
+example-blog/<span class="hljs-number">2016</span>-<span class="hljs-number">03</span>-<span class="hljs-number">11</span>-blog-post<span class="hljs-selector-class">.md</span>
+example-blog/<span class="hljs-number">2017</span>-<span class="hljs-number">04</span>-<span class="hljs-number">10</span>-blog-post-two<span class="hljs-selector-class">.md</span>
+i18n/en<span class="hljs-selector-class">.js</span>
+pages/en/help<span class="hljs-selector-class">.js</span>
+pages/en/index<span class="hljs-selector-class">.js</span>
+pages/en/users<span class="hljs-selector-class">.js</span>
+static/img/...
+languages<span class="hljs-selector-class">.js</span>
+siteConfig<span class="hljs-selector-class">.js</span>
+</code></pre>
+<p><code>examples</code> will not overwrite any existing files of the same name in your website folder.</p>
+<h2><a class="anchor" aria-hidden="true" name="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h2>
+<p>The provided example files contain configurations for an example project <code>deltice/test-site</code> and with the documents in <code>example-docs/</code> and blog posts in <code>example-blog/</code>. These are provided for your reference to help you configure your project.</p>
+<h3><a class="anchor" aria-hidden="true" name="document-and-blog-front-matters"></a><a href="#document-and-blog-front-matters" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document and Blog Front Matters</h3>
+<p>Documentation should contain front matter that follows this example:</p>
+<pre><code class="hljs">---
+id: doc1 <span class="hljs-comment">&lt;!-- used for docs to find each other and to map links --&gt;</span>
+title: Document Title
+layout: docs1 <span class="hljs-comment">&lt;!-- used to determine different sidebar groupings --&gt;</span>
+category: Sidebar Category 1 <span class="hljs-comment">&lt;!-- Category on the sidebar under which this doc goes --&gt;</span>
+permalink: docs/en/doc1.html <span class="hljs-comment">&lt;!-- link to the document that is used for site --&gt;</span>
+previous: doc0 <span class="hljs-comment">&lt;!-- previous doc on sidebar for navigation --&gt;</span>
+next: doc2 <span class="hljs-comment">&lt;!-- next doc on the sidebar for navigation --&gt;</span>
+<span class="hljs-comment">&lt;!-- don't include next if this is the last doc; don't include previous if first doc --&gt;</span>
+---
+</code></pre>
+<p>Blog posts should be written as markdown files with the following front matter:</p>
+<pre><code class="hljs"><span class="hljs-meta">---</span>
+<span class="hljs-attr">title:</span> <span class="hljs-string">Blog</span> <span class="hljs-string">Post</span> <span class="hljs-string">Title</span>
+<span class="hljs-attr">author:</span> <span class="hljs-string">Author</span> <span class="hljs-string">Name</span>
+<span class="hljs-attr">authorURL:</span> <span class="hljs-attr">http://twitter.com/author</span> <span class="hljs-string">&lt;!--</span> <span class="hljs-string">(or</span> <span class="hljs-string">some</span> <span class="hljs-string">other</span> <span class="hljs-string">link)</span> <span class="hljs-bullet">--&gt;</span>
+<span class="hljs-attr">authorFBID:</span> <span class="hljs-number">21315325</span> <span class="hljs-string">&lt;!--</span> <span class="hljs-string">id</span> <span class="hljs-string">to</span> <span class="hljs-string">get</span> <span class="hljs-string">author's</span> <span class="hljs-string">picture</span> <span class="hljs-bullet">--&gt;</span>
+<span class="hljs-meta">---</span>
+</code></pre>
+<p>In the blog post you should include a line <code>&lt;!--truncate--&gt;</code>. This will determine under which point text will be ignored when generating the preview of your blog post. Blog posts should have the file name format: <code>yyyy-mm-dd-your-file-name.md</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="language-configurations"></a><a href="#language-configurations" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language Configurations</h3>
+<p>If you wish to support websites for other languages, the <code>languages.js</code> file provides a list of what languages you wish to enable. Files in the <code>i18n</code> folder will provide localized versions of various strings.</p>
+<p>If you only wish to have an English version of your site, the <code>i18n</code> folder and the <code>languages.js</code> file are not necessary to run Docusaurus and should be deleted.</p>
+<h3><a class="anchor" aria-hidden="true" name="site-configurations"></a><a href="#site-configurations" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Site Configurations</h3>
+<p>Configure the siteConfig.js file which has comments guiding you through what needs to be done and how each configuration affects your website.</p>
+<p>Customize core/Footer.js which will serve as the footer for each page on your website.</p>
+<p>Include your own top-level pages as React components in <code>pages/</code>. These components should just be the body sections of the pages you want, and they will be included with the header and footer that the rest of Docusaurus uses. Examples are provided for your reference. Currently, if you want to add other React components to your pages, you must include all of it inside that file due to how <code>require</code> paths are set-up. You may also include <code>.html</code> files directly, but this is not recommended, and these will just be served as is and will not have any of the header/footer/styles shared by the rest of Docusaurus.</p>
+<p>All images and other static assets you wish to include should be placed inside the <code>static</code> folder. Any <code>.css</code> files provided in <code>static</code> will be concatenated to the standard styles provided by Docusaurus and used site-wide.</p>
+<p>Files placed in <code>static/</code> will be accessible in the following way: <code>static/img/image.png</code> will be accessible at <code>img/image.png</code>.</p>
+<h2><a class="anchor" aria-hidden="true" name="using-docusaurus"></a><a href="#using-docusaurus" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Docusaurus</h2>
+<h3><a class="anchor" aria-hidden="true" name="run-the-server"></a><a href="#run-the-server" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run the Server</h3>
+<p>To run your website locally run the script:</p>
+<pre><code class="hljs">npm <span class="hljs-keyword">run</span><span class="bash"> start
+</span></code></pre>
+<p>This will start a server hosting your website locally at <code>localhost:3000</code>. This server will ignore any occurences <code>siteConfig.baseUrl</code> in URLs, e.g. <code>localhost:3000/your-site/index.html</code> will be the same as <code>localhost:3000/index.html</code>. Any changes to configured files will be reflected by refreshing the page, i.e. the server does not need to be restarted to show changes.</p>
+<h3><a class="anchor" aria-hidden="true" name="build-static-pages"></a><a href="#build-static-pages" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build Static Pages</h3>
+<p>To create a static build of your website, run the script:</p>
+<pre><code class="hljs">npm <span class="hljs-keyword">run</span><span class="bash"> build
+</span></code></pre>
+<p>This will generate <code>.html</code> files from all of your docs and other pages included in <code>pages/</code>. This allows you to check whether or not all your files are being generated correctly. The build folder is inside Docusaurus's directory inside <code>node_modules</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="publishing-your-website"></a><a href="#publishing-your-website" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Publishing Your Website</h3>
+<p>Use CircleCI to publish your website whenever your project repo is updated. Configure your circle.yml file in your project repo to run commands to publish to GitHub Pages. An example is shown here:</p>
+<pre><code class="hljs css yaml"><span class="hljs-attr">machine:</span>
+<span class="hljs-attr">  node:</span>
+<span class="hljs-attr">    version:</span> <span class="hljs-number">6.10</span><span class="hljs-number">.3</span>
+<span class="hljs-attr">  npm:</span>
+<span class="hljs-attr">    version:</span> <span class="hljs-number">3.10</span><span class="hljs-number">.10</span>
+
+<span class="hljs-attr">test:</span>
+<span class="hljs-attr">  override:</span>
+<span class="hljs-bullet">    -</span> <span class="hljs-string">"true"</span>
+
+<span class="hljs-attr">deployment:</span>
+<span class="hljs-attr">  website:</span>
+<span class="hljs-attr">    branch:</span> <span class="hljs-string">master</span>
+<span class="hljs-attr">    commands:</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">git</span> <span class="hljs-string">config</span> <span class="hljs-bullet">--global</span> <span class="hljs-string">user.email</span> <span class="hljs-string">"test-site-bot@users.noreply.github.com"</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">git</span> <span class="hljs-string">config</span> <span class="hljs-bullet">--global</span> <span class="hljs-string">user.name</span> <span class="hljs-string">"Website Deployment Script"</span>
+<span class="hljs-bullet">      -</span> <span class="hljs-string">echo</span> <span class="hljs-string">"machine github.com login test-site-bot password $GITHUB_TOKEN"</span> <span class="hljs-string">&gt; ~/.netrc
+      - cd website &amp;&amp; npm install &amp;&amp; GIT_USER=test-site-bot npm run publish-gh-pages
+</span></code></pre>
+<p>Note that in this case a GitHub user <code>test-site-bot</code> is created to use just for publishing. Make sure to give your Git user push permissions for your project and to set a GITHUB_TOKEN environment variable in Circle if you choose to publish this way.</p>
+<p>If you wish to manually publish your website with the <code>publish-gh-pages</code> script, run the following example command with the appropriate variables for your project:</p>
+<pre><code class="hljs"><span class="hljs-attribute">DEPLOY_USER</span>=deltice <span class="hljs-attribute">GIT_USER</span>=test-site-bot <span class="hljs-attribute">CIRCLE_PROJECT_USERNAME</span>=deltice <span class="hljs-attribute">CIRCLE_PROJECT_REPONAME</span>=test-site <span class="hljs-attribute">CIRCLE_BRANCH</span>=master npm <span class="hljs-builtin-name">run</span> publish-gh-pages
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="doc2.html">document number 2 →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="" class="nav-home"><img src="img/docusaurus.svg" alt="Test Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="docs/en/doc1.html">Getting Started (or other categories)</a><a href="docs/en/doc2.html">Guides (or other categories)</a><a href="docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank">Twitter</a></div><div><h5>More</h5><a href="blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/caabernathy/webby" data-icon="octicon-star" data-count-href="/deltice/test-site/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource"><img src="img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2017 Facebook Inc.</section></footer></div></body></html>
